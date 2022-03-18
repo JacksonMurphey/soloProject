@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from 'react-router-dom'
+import { Link } from '@reach/router'
 
 //Technically I shouldnt be doing this. I should just import my styled components from my LoginElements. But Im tired, so Copy/Paste. 
 
@@ -54,12 +54,12 @@ export const FormContent = styled.div`
 export const Form = styled.form`
     max-width: 400px;
     background: #010101;
-    height: auto;
+    height: 90%;
     width: 100%;
     z-index: 1;
     display: grid;
     margin: 0 auto;
-    padding: 80px 32px;
+    padding: 60px 32px 100px 32px;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0,0,0,.9);
 

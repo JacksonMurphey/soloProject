@@ -37,8 +37,7 @@ module.exports = {
                                         'usertoken',
                                         jwt.sign({
                                             id: userData._id,
-                                            firstName: userData.firstName,
-                                            lastName: userData.lastName,
+
                                             email: userData.email,
                                             username: userData.username
                                         }, 'asdfghjkl12345'), { //replace with: process.env.JWT_SECRET

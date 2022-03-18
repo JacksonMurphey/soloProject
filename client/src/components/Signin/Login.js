@@ -1,7 +1,7 @@
 import { Container, FormWrapper, Logo, FormContent, Form, FormInput, FormLabel, FormH1, FormButton, Text, Register } from "./LoginElements";
 import { useState } from "react";
 import axios from 'axios';
-import { useNavigate } from "react-router";
+import { navigate } from '@reach/router'
 
 
 
@@ -9,6 +9,7 @@ const Login = (props) => {
 
     const [user, setUser] = useState({
         email: "",
+        username: "",
         password: ""
     })
     const [errMessage, setErrMessage] = useState('')
@@ -17,7 +18,7 @@ const Login = (props) => {
         setUser({ ...user, [e.target.name]: e.target.value })
     }
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     const loginHandler = e => {
         e.preventDefault()
@@ -29,6 +30,7 @@ const Login = (props) => {
             .catch(err => {
                 console.log(err.response.data)
                 setErrMessage(err.response.data.message)
+                setUser({ username: "", email: "", password: "" })
             })
     }
 

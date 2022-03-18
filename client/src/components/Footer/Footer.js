@@ -33,9 +33,9 @@ const Footer = (props) => {
                         <FooterLinksWrap>
                             <FooterItems>
                                 <FooterTitle>Extras</FooterTitle>
-                                <FooterLink to='/register'>Get iOS App</FooterLink>
-                                <FooterLink to='/register'>Get Featured</FooterLink>
-                                <FooterLink to='/register'>Newsletter</FooterLink>
+                                <FooterLink to='/'>Get iOS App</FooterLink>
+                                <FooterLink to='/'>Get Featured</FooterLink>
+                                <FooterLink to='/'>Newsletter</FooterLink>
                             </FooterItems>
 
                             <FooterItems>

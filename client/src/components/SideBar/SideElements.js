@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { FaTimes } from 'react-icons/fa'
 import { Link as LinkScroll } from 'react-scroll'
-import { Link as LinkR } from 'react-router-dom'
+import { Link } from '@reach/router'
 
 export const SBContainer = styled.aside`
     position: fixed;
@@ -66,12 +66,30 @@ export const SideLink = styled(LinkScroll)`
     }
 `
 
+export const SideRoute = styled(Link)`
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.5rem;
+text-decoration: none;
+list-style: none;
+transition: 0.2s ease-in-out;
+color: #fff;
+cursor: pointer;
+
+&:hover {
+    color: #6C63FF;
+    transition: 0.2s ease-in-out;
+    // text-decoration: underline;
+}
+`
+
 export const SideBtn = styled.div`
     display: flex;
     justify-content: center;
 `
 
-export const SBtnLink = styled(LinkR)`
+export const SBtnLink = styled(Link)`
     border-radius: 50px;
     background: #6C63FF;
     white-space: nowrap;

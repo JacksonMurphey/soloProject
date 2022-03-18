@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
-import { Nav, NavBarContainer, NavLogo, MobileIcons, Menu, MenuItem, MenuLinks, NavBtn, NBtnLink } from './NavElements'
+import { Nav, NavBarContainer, NavLogo, MobileIcons, Menu, MenuItem, MenuLinks, NavBtn, NBtnLink, MenuRoutes } from './NavElements'
 import { FaBars as Bars } from 'react-icons/fa'
 import { animateScroll } from 'react-scroll'
+import { Link } from '@reach/router'
 
 
 const NavBar = (props) => {
@@ -69,7 +70,7 @@ const NavBar = (props) => {
                             >Services</MenuLinks>
                         </MenuItem>
                         <MenuItem>
-                            <MenuLinks as="a" href='/register'>Sign Up</MenuLinks>
+                            <MenuRoutes to="/register">Sign Up</MenuRoutes>
                         </MenuItem>
                     </Menu>
 
@@ -77,7 +78,7 @@ const NavBar = (props) => {
                         <NBtnLink to='/signin'>Sign In</NBtnLink>
                     </NavBtn>
                 </NavBarContainer>
-            </Nav>
+            </Nav >
         </>
     )
 }

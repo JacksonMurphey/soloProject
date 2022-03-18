@@ -19,6 +19,7 @@ app.use(cookieParser())
 //-- Requires config and routes --
 require('./config/mongoose.config')
 require('./routes/user.routes')(app)
+require('./routes/expense.routes')(app)
 
 
 app.listen(port, () => console.log(`Listening on Port: ${port}`))

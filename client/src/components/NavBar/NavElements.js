@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link as LinkR } from 'react-router-dom'
+import { Link as LinkR } from '@reach/router'
 import { Link as LinkScroll } from 'react-scroll'
 // Above I imported and renamed my variables. This was done because I realized that in order to use react-scroll, I would have to import Link from react-scroll. So I wanted to differentiate the two. 
 //React-Scroll is just a subtle UI feature. Also known as smooth-scrolling. Smooth scrolling is when instead of clicking on a button and being instantly taken to a different part of the same page, the user is navigated there via a scroll animation
@@ -96,6 +96,24 @@ export const MenuLinks = styled(LinkScroll)`
         border-bottom: 3px solid #fff;
     }
     
+`
+
+export const MenuRoutes = styled(LinkR)`
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+
+    &:hover {
+        border-bottom: 3px solid #6C63FF;
+    }
+
+    &:active {
+        border-bottom: 3px solid #fff;
+    }
 `
 
 

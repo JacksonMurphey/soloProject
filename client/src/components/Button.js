@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from 'react-router-dom'
+import { Link } from '@reach/router'
 
 export const Button = styled(Link)`
     border-radius: 50px;
@@ -30,5 +30,4 @@ export const Button = styled(Link)`
     }
 `
 // I will likely need to adjust my button :hover dark ternary.
-//previous primary color: #01bf71
-//new primary color: #6C63FF
+//primary color: #6C63FF

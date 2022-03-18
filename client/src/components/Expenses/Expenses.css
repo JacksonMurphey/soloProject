@@ -1,0 +1,29 @@
+.expenses {
+  padding: 1rem;
+  background-color: #010606;
+  margin: 3rem auto;
+  width: 50rem;
+  max-width: 95%;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+#newBtn {
+  font: inherit;
+  cursor: pointer;
+  padding: 12px 32px;
+  border: 1px solid #6c63ff;
+  background-color: #6c63ff;
+  color: #fff;
+  border-radius: 25px;
+  margin-left: 37.3%;
+  margin-top: 2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+#newBtn:hover,
+#newBtn:active {
+  background-color: #6c63ff;
+  border-color: #6c63ff;
+  color: #010606;
+}

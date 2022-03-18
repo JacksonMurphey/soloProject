@@ -35,7 +35,7 @@ const IntroSection = (props) => {
                 <IntroH1>Part You</IntroH1>
                 <IntroH1>All Nizell</IntroH1>
 
-                <IntroP>Sign up Today and receive a complimentary buddy pass</IntroP>
+                <IntroP>Finacial Tracking, On demand, served just how you like it</IntroP>
 
                 <IntroBtnWrp>
                     <Button to='/register'

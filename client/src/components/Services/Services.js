@@ -20,8 +20,8 @@ const Services = (props) => {
 
                 <ServicesCard>
                     <ServicesImg src={Img2} />
-                    <ServicesH2>Your Favorite Movies</ServicesH2>
-                    <ServicesP>Find and add all your favorite movies and we can keep them organized for you.</ServicesP>
+                    <ServicesH2>All Demand Analysts</ServicesH2>
+                    <ServicesP>Not sure where to invest? Looking for help in planning your future? Let our team of skilled Finacial Analysts help you, whenever you need it.</ServicesP>
                 </ServicesCard>
 
                 <ServicesCard>
