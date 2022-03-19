@@ -1,30 +1,27 @@
-import axios from "axios"
-import React, { useState, useEffect } from 'react';
-// import { useNavigate } from "react-router-dom";
-// import { useParams } from "react-router";
-import { navigate, Link } from "@reach/router";
+import axios from 'axios';
+import React, { useState } from 'react';
+import '../components/Profile/Profile.css'
+import ProfileSide from '../components/SideBar/ProfileSide';
+import ProfileNav from '../components/NavBar/ProfileNav';
+import Footer from '../components/Footer/Footer';
 
 
 const Profile = props => {
 
 
     const { username } = props
-    // const { user } = props
-    // const [expensesList, setExpensesList] = useState([])
-
-    // useEffect(() => {
-    //     axios.get(`http://localhost:8000/api/userexpenses/${username}`, { withCredentials: true })
-    //         .then(res => {
-    //             console.log(res.data)
-    //             // setExpensesList(res.data)
-    //         })
-    //         .catch(err => {
-    //             console.log(err)
-    //         })
-    // }, [username])
+    const [isOpen, setIsOpen] = useState(false)
+    const clickToggle = () => {
+        setIsOpen(!isOpen)
+    }
 
     return (
-        <div>Welcome {username}</div>
+        <>
+            <ProfileSide isOpen={isOpen} clickToggle={clickToggle} username={username} />
+            <ProfileNav clickToggle={clickToggle} username={username} />
+
+            <Footer />
+        </>
 
     )
 }

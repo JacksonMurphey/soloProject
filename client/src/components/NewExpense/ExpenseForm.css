@@ -23,6 +23,9 @@
   width: 20rem;
   max-width: 100%;
 }
+.new-expense__control input::-webkit-calendar-picker-indicator {
+  background-color: #6c63ff;
+}
 
 .new-expense__actions {
   text-align: right;

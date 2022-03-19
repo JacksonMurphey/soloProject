@@ -20,7 +20,7 @@ const ChartBar = (props) => {
             </div>
             <div className='chart-bar__label'>{label} </div>
             <p style={{ fontSize: '10px', fontWeight: "bold", marginTop: "5px" }}>${newValue}</p>
-            <p style={{ fontSize: '8px' }}>({fillBarHeight} YTD)</p>
+            <p style={{ fontSize: '9px', color: "blue" }}>({fillBarHeight})</p>
         </div>
     )
 }

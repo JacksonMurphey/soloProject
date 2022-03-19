@@ -12,6 +12,9 @@ import ExpenseChart from "../components/Expenses/ExpenseChart";
 import DashSide from "../components/SideBar/DashSide";
 import DashNav from "../components/NavBar/DashNav";
 import Footer from "../components/Footer/Footer";
+import { AltIntroContainer, IntroContainer } from "../components/IntroSection/IntroElements";
+import ExpenseNav from "../components/NavBar/ExpenseNav";
+import ExpSide from "../components/SideBar/ExpSide";
 
 
 const Expenses = (props) => {
@@ -68,30 +71,34 @@ const Expenses = (props) => {
 
     return (
         <>
-            <DashSide isOpen={isOpen} clickToggle={clickToggle} username={username} />
-            <DashNav clickToggle={clickToggle} username={username} />
+            <ExpSide isOpen={isOpen} clickToggle={clickToggle} username={username} />
+            {/* <DashNav clickToggle={clickToggle} username={username} /> */}
+            <ExpenseNav clickToggle={clickToggle} username={username} />
 
-            <div style={{ background: "#010606" }}>
+            <div style={{ background: "#010606", paddingBottom: "1px" }}>
                 <div className="expenses">
-                    <NewExpense
-                        username={username}
-                        setExpensesList={setExpensesList}
-                        expensesList={expensesList} />
+
                     <ExpenseFilter
                         filterYear={filterYear}
                         filterHandler={filterHandler} />
                     <ExpenseChart
                         expensesList={filteredExpenses} />
+                    <NewExpense
+                        username={username}
+                        setExpensesList={setExpensesList}
+                        expensesList={expensesList} />
 
                     {!viewExpenses ?
-                        <button id="newBtn" onClick={openViewExpenses}>View All Expenses</button>
+                        <button id="newBtn" onClick={openViewExpenses} >View Expenses</button>
                         :
                         <ExpenseItem
                             expensesList={filteredExpenses} setExpensesList={setExpensesList} onClose={closeViewExpenses} />
                     }
                 </div>
             </div>
+
             <Footer />
+
         </>
     )
 

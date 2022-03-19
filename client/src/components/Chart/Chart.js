@@ -22,6 +22,7 @@ const Chart = (props) => {
         sumOfDataPointArr += dataPointVals[i] //returns sum of all vals from array.
     }
     console.log(sumOfDataPointArr)
+    const fifteenPercent = Math.round(.15 * sumOfDataPointArr)
 
     return (
         <>
@@ -37,14 +38,18 @@ const Chart = (props) => {
 
 
             </div>
-            <div>
-                <p style={{ color: "#fff", marginTop: "12px", fontWeight: "bold" }}>
-                    Total Expenses for this Year: ${sumOfDataPointArr}
+            <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+                <p style={{ color: "#fff", marginTop: "12px" }}>
+                    Total Expenses for this Year: <span style={{ color: "red" }}>${sumOfDataPointArr}</span>
                 </p>
-                <p style={{ color: "#fff", marginTop: "10px" }}>
-                    Most Spent in one Month: ${totalMaxVal}
+                <p style={{ display: "block", color: "#fff", marginTop: "12px", marginLeft: "20%" }}>
+                    Most Spent in one Month: <span style={{ color: "red" }}>${totalMaxVal}</span>
                 </p>
+
             </div>
+            <p style={{ color: "#fff", marginTop: "13px", textAlign: "center", color: "#b2aefb" }}>
+                If you saved 15%, instead of spending it, you would have: <span style={{ color: "lightgreen" }}>${fifteenPercent}.00</span>
+            </p>
         </>
     )
 }

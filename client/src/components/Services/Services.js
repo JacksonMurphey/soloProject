@@ -14,14 +14,14 @@ const Services = (props) => {
 
                 <ServicesCard>
                     <ServicesImg src={Img1} />
-                    <ServicesH2>Expense Organization</ServicesH2>
+                    <ServicesH2>Expense Management</ServicesH2>
                     <ServicesP>Let us help you in organizing your monthly and yearly expenses, so you dont have to.</ServicesP>
                 </ServicesCard>
 
                 <ServicesCard>
                     <ServicesImg src={Img2} />
-                    <ServicesH2>All Demand Analysts</ServicesH2>
-                    <ServicesP>Not sure where to invest? Looking for help in planning your future? Let our team of skilled Finacial Analysts help you, whenever you need it.</ServicesP>
+                    <ServicesH2>On Demand Analysts</ServicesH2>
+                    <ServicesP>Looking for help in planning your future? Let our team of skilled Finacial Analysts help you. Whenever, Wherever.</ServicesP>
                 </ServicesCard>
 
                 <ServicesCard>

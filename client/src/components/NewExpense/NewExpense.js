@@ -14,7 +14,7 @@ const NewExpense = (props) => {
         price: 0
     })
 
-    const [isAddExpense, setIsAddExpense] = useState(false);
+    const [isAddExpense, setIsAddExpense] = useState(true);
 
     const submitHandler = e => {
         e.preventDefault()
@@ -25,7 +25,7 @@ const NewExpense = (props) => {
                 setExpensesList((prevExpenses) => {
                     return [newExpense, ...prevExpenses]
                 })
-                setIsAddExpense(false)
+                // setIsAddExpense(false)
                 setNewExpense({
                     title: '',
                     date: '',
@@ -56,7 +56,7 @@ const NewExpense = (props) => {
 
         <div id='form' className='new-expense'>
             {!isAddExpense ?
-                <button onClick={startAddHandler}>Add New Expense</button>
+                <button onClick={startAddHandler} style={{ alignContent: 'center' }}>Add Expenses</button>
                 :
                 <ExpenseForm
                     submitHandler={submitHandler}

@@ -16,14 +16,15 @@
   background-color: #6c63ff;
   color: #fff;
   border-radius: 25px;
-  margin-left: 37.3%;
-  margin-top: 2rem;
+
+  margin-left: 38.7%;
+  /* margin-top: 0.2rem; */
   transition: all 0.2s ease-in-out;
 }
 
 #newBtn:hover,
 #newBtn:active {
-  background-color: #6c63ff;
-  border-color: #6c63ff;
+  background-color: #fff;
+  border-color: #fff;
   color: #010606;
 }

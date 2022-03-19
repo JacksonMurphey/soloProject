@@ -14,9 +14,7 @@ const ExpenseForm = (props) => {
 
     return (
         <form onSubmit={submitHandler}>
-            {errors.title && <span style={{ color: "red" }}>All Fields are Required</span>}
-            {errors.price && <span style={{ color: "red" }}>All Fields are Required</span>}
-            {errors.date && <span style={{ color: "red" }}>All Fields are Required</span>}
+
 
             <div className='new-expense__controls'>
                 <div className='new-expense__control'>
@@ -34,10 +32,13 @@ const ExpenseForm = (props) => {
                 </div>
 
                 <div className='new-expense__actions'>
-                    <button type='button' onClick={onCancel}>Cancel</button>
+                    <button type='button' onClick={onCancel}>Close</button>
                     <button type='submit'>Add Expense</button>
                 </div>
             </div>
+            {errors.title && <span style={{ color: "red" }}>All Fields are Required</span>}
+            {errors.price && <span style={{ color: "red" }}>All Fields are Required</span>}
+            {errors.date && <span style={{ color: "red" }}>All Fields are Required</span>}
         </form>
     )
 }

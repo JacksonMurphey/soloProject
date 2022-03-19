@@ -22,7 +22,7 @@ color: #fff;
 
 export const YearSelect = styled.select`
 border-radius: 10px;
-margin-left: 500px;
+margin-left: 50%;
 padding: 8px 28px;
 background: #fff;
 border: none;
