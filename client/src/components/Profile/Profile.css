@@ -9,3 +9,7 @@
   user-select: none;
   background-color: bisque;
 }
+.noteBg {
+  background-color: #010606;
+  /* background-image: url("../../images/cork_board.jpg"); */
+}

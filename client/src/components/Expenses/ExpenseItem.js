@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './ExpenseItem.css'
 import ExpenseDate from './ExpenseDate'
-import { FcDeleteRow } from 'react-icons/fc'
+
 import DeleteExpense from './DeleteExpense'
 
 

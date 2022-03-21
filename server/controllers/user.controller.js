@@ -79,6 +79,19 @@ module.exports = {
                 .catch(err => res.json(err))
         },
 
+    updateOneUser:
+        (req, res) => {
+            User.findOneAndUpdate({ _id: req.jwtpayload.id }, req.body, { new: true, runValidators: true })
+                .then((updatedUser) => {
+                    console.log(updatedUser)
+                    res.json(updatedUser)
+                })
+                .catch(err => {
+                    console.log("Updating the User Failed")
+                    res.status(400).json({ message: 'Error in updateOneUser', error: err })
+                })
+        },
+
     findAllUsers:
         (req, res) => {
             User.find()
