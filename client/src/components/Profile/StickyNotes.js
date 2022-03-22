@@ -86,19 +86,19 @@ const StickyNotes = (props) => {
             <div onDragOver={dragMove}>
                 {
                     notesState.notes.map((note, index) => (
+                        <Draggable>
+                            <div
+                                className='note'
+                                key={index}
+                                style={{ transform: `rotate(${note.rotate}deg)` }}
+                                draggable='true'
+                                onDragEnd={noteDrop}
+                            >
+                                <div className='close' onClick={() => dispatch({ type: "DELETE_NOTE", payload: note })}><AiFillCloseCircle /></div>
+                                <pre className='text'>{note.text}</pre>
 
-                        <div
-                            className='note'
-                            key={index}
-                            style={{ transform: `rotate(${note.rotate}deg)` }}
-                            draggable='true'
-                            onDragEnd={noteDrop}
-                        >
-                            <div className='close' onClick={() => dispatch({ type: "DELETE_NOTE", payload: note })}><AiFillCloseCircle /></div>
-                            <pre className='text'>{note.text}</pre>
-
-                        </div>
-
+                            </div>
+                        </Draggable>
                     ))
                 }
             </div>
